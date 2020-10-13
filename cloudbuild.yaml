@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  entrypoint: 'node'
+  args: ['--version']
+- name: gcr.io/cloud-builders/git
+  entrypoint: /bin/bash
+  args: ["-c", "echo $(git rev-list --count ${BRANCH_NAME})"]
+# - name: 'docker'
+#   args: ['build', '-t', 'gcr.io/$PROJECT_ID/gcbapp-dockerfile-example', '.']
+# images: ['gcr.io/$PROJECT_ID/gcbapp-dockerfile-example']
+tags: ['mytag1', 'mytag2']
