@@ -16,3 +16,4 @@
 echo "Hello, world!"
 echo "The time is $(date)."
 echo "commit 1"
+echo "commit 2"
